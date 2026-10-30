@@ -1,0 +1,11 @@
+{
+  "name": "portfolio-website",
+  "version": "1.0.0",
+  "description": "Personal portfolio of Divya Garg with project search, light/dark mode and a Gemini-powered chatbot.",
+  "private": true,
+  "scripts": {
+    "start": "node dev-server.js",
+    "test": "node tests/run-tests.js"
+  },
+  "engines": { "node": ">=18" }
+}

@@ -1,95 +1,150 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Divya Garg — Personal Profile</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <a class="skip-link" href="#main">Skip to main content</a>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Divya Garg | Aspiring AIML Engineer</title>
+  <meta name="description" content="Portfolio of Divya Garg, B.Tech CSE (AIML) student at JECRC University: projects, skills and an AI chatbot." />
+  <meta name="theme-color" content="#0b1220" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2314b8a6'/%3E%3Ctext x='32' y='42' font-size='28' font-family='Arial' font-weight='700' text-anchor='middle' fill='%23062925'%3EDG%3C/text%3E%3C/svg%3E" />
+  <script>
+    // Apply saved theme before paint to avoid a flash. Default is dark.
+    try {
+      var t = localStorage.getItem("theme");
+      if (t === "light" || t === "dark") document.documentElement.setAttribute("data-theme", t);
+    } catch (e) {}
+  </script>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
 
-    <header class="site-header">
-      <p class="eyebrow">Student portfolio</p>
-      <h1>Divya Garg</h1>
-      <p class="tagline">PLACEHOLDER: short professional tagline, for example Frontend student and aspiring software engineer.</p>
-      <nav aria-label="Primary">
-        <ul>
-          <li><a href="#about">About</a></li>
-          <li><a href="#skills">Skills</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
-    </header>
+  <header class="site-header">
+    <nav class="nav container" aria-label="Main">
+      <a class="brand" href="#home" aria-label="Divya Garg, home">DG</a>
+      <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navLinks" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About Me</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="#chatbot">AI Chatbot</a></li>
+      </ul>
+      <button class="theme-toggle" id="themeToggle" type="button" aria-label="Switch to light mode" title="Toggle light/dark mode">
+        <span class="icon-sun" aria-hidden="true">☀</span>
+        <span class="icon-moon" aria-hidden="true">☾</span>
+      </button>
+    </nav>
+  </header>
 
-    <main id="main">
-      <section id="about" aria-labelledby="about-heading">
-        <h2 id="about-heading">About</h2>
-        <p>
-          Hello — I am Divya Garg, a student building a personal profile so visitors can
-          learn what I work on and how to reach me.
-        </p>
-        <p>
-          PLACEHOLDER: two or three sentences about your studies, interests, and
-          the kind of work you want to do next. Mention your school, major, or
-          current focus here.
-        </p>
-        <p class="location">Based in PLACEHOLDER: city / region.</p>
-      </section>
+  <main id="main">
+    <!-- HOME -->
+    <section id="home" class="hero container">
+      <div class="hero-text reveal">
+        <p class="eyebrow">Hello, I'm</p>
+        <h1 id="heroName">Divya Garg</h1>
+        <p class="hero-title" id="heroTitle">Aspiring AIML Engineer</p>
+        <p class="hero-intro" id="heroIntro"></p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#projects">View my projects</a>
+          <a class="btn btn-ghost" href="#chatbot">Ask my AI chatbot</a>
+        </div>
+      </div>
+      <div class="hero-avatar reveal" aria-hidden="true">
+        <div class="avatar"><span id="avatarInitials">DG</span></div>
+      </div>
+    </section>
 
-      <section id="skills" aria-labelledby="skills-heading">
-        <h2 id="skills-heading">Skills</h2>
-        <ul class="skill-list">
-          <li>HTML</li>
-          <li>CSS</li>
-          <li>JavaScript</li>
-          <li>PLACEHOLDER: additional skill (for example Python)</li>
-          <li>PLACEHOLDER: additional skill (for example Git)</li>
-          <li>PLACEHOLDER: additional skill (for example UI design)</li>
-        </ul>
-      </section>
+    <!-- ABOUT -->
+    <section id="about" class="section container">
+      <h2 class="section-title">About Me</h2>
+      <div class="about-grid">
+        <div class="about-text reveal" id="aboutText"></div>
+        <aside class="card edu reveal" aria-label="Education">
+          <h3>Education</h3>
+          <p class="edu-degree" id="eduDegree"></p>
+          <p id="eduInstitution"></p>
+          <p class="muted" id="eduStatus"></p>
+          <h3 class="goal-heading">Career goal</h3>
+          <p id="goals"></p>
+        </aside>
+      </div>
+    </section>
 
-      <section id="projects" aria-labelledby="projects-heading">
-        <h2 id="projects-heading">Projects</h2>
-        <ul class="project-list">
-          <li>
-            <a href="https://PLACEHOLDER-project-one.example">PLACEHOLDER: Project One title</a>
-            <p>PLACEHOLDER: one-sentence description of Project One and what you built.</p>
-          </li>
-          <li>
-            <a href="https://PLACEHOLDER-project-two.example">PLACEHOLDER: Project Two title</a>
-            <p>PLACEHOLDER: one-sentence description of Project Two and what you built.</p>
-          </li>
-          <li>
-            <a href="https://PLACEHOLDER-project-three.example">PLACEHOLDER: Project Three title</a>
-            <p>PLACEHOLDER: one-sentence description of Project Three and what you built.</p>
-          </li>
-        </ul>
-      </section>
+    <!-- SKILLS -->
+    <section id="skills" class="section container">
+      <h2 class="section-title">Skills</h2>
+      <div class="skills-grid" id="skillsGrid"></div>
+    </section>
 
-      <section id="contact" aria-labelledby="contact-heading">
-        <h2 id="contact-heading">Contact</h2>
-        <p>
-          Email:
-          <a href="mailto:PLACEHOLDER@example.com">PLACEHOLDER@example.com</a>
-        </p>
-        <p>
-          LinkedIn:
-          <a href="https://www.linkedin.com/in/PLACEHOLDER-profile">linkedin.com/in/PLACEHOLDER-profile</a>
-        </p>
-        <p>
-          GitHub:
-          <a href="https://github.com/PLACEHOLDER-username">github.com/PLACEHOLDER-username</a>
-        </p>
-      </section>
-    </main>
+    <!-- PROJECTS -->
+    <section id="projects" class="section container">
+      <h2 class="section-title">My Projects</h2>
+      <div class="search-row">
+        <label for="projectSearch" class="sr-only">Search projects by name or technology</label>
+        <input id="projectSearch" type="search" placeholder="Search: Python, Quiz, Book…" autocomplete="off" />
+        <button id="clearSearch" class="btn btn-ghost btn-small" type="button" hidden>Clear</button>
+      </div>
+      <p class="result-count" id="resultCount" role="status" aria-live="polite"></p>
+      <div class="projects-grid" id="projectsGrid"></div>
+      <p class="no-results" id="noResults" hidden>No projects match your search. Try “Python”, “Quiz” or “Book”.</p>
+      <p class="load-error" id="loadError" hidden>Could not load portfolio data. If you opened this file directly, run it with a local server (see README).</p>
+    </section>
 
-    <footer class="site-footer">
-      <p>&copy; <span id="year"></span> Divya Garg. All rights reserved.</p>
-      <button type="button" id="theme-toggle" aria-pressed="false">Use dark theme</button>
-    </footer>
+    <!-- CONTACT -->
+    <section id="contact" class="section container">
+      <h2 class="section-title">Contact Information</h2>
+      <div class="contact-grid">
+        <a class="card contact-card reveal" id="contactEmail" href="#">
+          <span class="contact-label">Email</span>
+          <span class="contact-value" id="contactEmailText"></span>
+        </a>
+        <a class="card contact-card reveal" id="contactGithub" href="#" target="_blank" rel="noopener noreferrer">
+          <span class="contact-label">GitHub</span>
+          <span class="contact-value" id="contactGithubText"></span>
+        </a>
+        <a class="card contact-card reveal" id="contactLinkedin" href="#" target="_blank" rel="noopener noreferrer">
+          <span class="contact-label">LinkedIn</span>
+          <span class="contact-value">Divya Garg</span>
+        </a>
+      </div>
+    </section>
 
-    <script src="script.js"></script>
-  </body>
+    <!-- CHATBOT -->
+    <section id="chatbot" class="section container">
+      <h2 class="section-title">AI Chatbot</h2>
+      <p class="section-sub">Ask about me, my skills or my projects. Answers come from the information on this portfolio.</p>
+      <div class="chat card" id="chat">
+        <div class="chat-log" id="chatLog" role="log" aria-live="polite" aria-label="Chat messages">
+          <div class="msg bot"><p>Hi! I'm Divya's portfolio assistant. Ask me anything about her skills, education or projects.</p></div>
+        </div>
+        <div class="chat-suggestions" id="chatSuggestions">
+          <button type="button" class="chip">Who are you?</button>
+          <button type="button" class="chip">What are your skills?</button>
+          <button type="button" class="chip">What projects have you completed?</button>
+          <button type="button" class="chip">What was corrected in the buggy code project?</button>
+          <button type="button" class="chip">How does the reading list work?</button>
+          <button type="button" class="chip">Where is your GitHub?</button>
+        </div>
+        <form class="chat-form" id="chatForm" autocomplete="off">
+          <label for="chatInput" class="sr-only">Type your question</label>
+          <input id="chatInput" type="text" maxlength="500" placeholder="Type your question..." required />
+          <button class="btn btn-primary" id="chatSend" type="submit">Send</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year"></span> Divya Garg · B.Tech CSE (AIML), JECRC University</p>
+    </div>
+  </footer>
+
+  <script src="js/filter.js"></script>
+  <script src="js/app.js"></script>
+</body>
 </html>
