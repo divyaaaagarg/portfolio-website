@@ -2,7 +2,7 @@
 
 A responsive personal portfolio for **Divya Garg**, B.Tech CSE (AIML) student at JECRC University, with project search, light/dark mode and an AI chatbot that answers questions about the portfolio.
 
-**Live website:** https://portfolio-website-uqyy.vercel.app/)
+**Live website:** https://portfolio-website-two-tau-jo9lb8irkn.vercel.app/
 
 ## Sections
 Home · About Me · Skills · Projects · Contact Information · AI Chatbot
