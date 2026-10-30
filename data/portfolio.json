@@ -1,1 +1,72 @@
+{
+  "name": "Divya Garg",
+  "initials": "DG",
+  "title": "Aspiring AIML Engineer",
+  "intro": "I'm a B.Tech CSE (AIML) student at JECRC University. I'm building a strong foundation in Python and web development, with the goal of becoming an AI/ML engineer.",
+  "bio": [
+    "I'm Divya Garg, a third-semester B.Tech Computer Science and Engineering student specialising in Artificial Intelligence and Machine Learning at JECRC University.",
+    "So far I have worked on Python programs, code refactoring, debugging with Cursor AI, and small browser-based apps built with HTML, CSS and JavaScript. This portfolio brings those projects together in one place.",
+    "I'm interested in AI and machine learning and want to keep strengthening my programming fundamentals so I can grow into an AI/ML engineer."
+  ],
+  "education": {
+    "degree": "B.Tech in Computer Science and Engineering (AIML)",
+    "institution": "JECRC University",
+    "status": "Currently in 3rd semester"
+  },
+  "goals": "To become an AI/ML engineer by building strong programming fundamentals and gaining hands-on experience through projects.",
+  "skills": [
+    { "group": "Languages", "items": ["Python", "JavaScript", "HTML5", "CSS3"] },
+    { "group": "Tools", "items": ["Git", "GitHub", "Cursor AI", "Vercel"] },
+    { "group": "Practices", "items": ["Debugging", "Code refactoring", "Input validation", "Responsive design", "Browser local storage"] },
+    { "group": "Learning focus", "items": ["Artificial Intelligence", "Machine Learning fundamentals"] }
+  ],
+  "contact": {
+    "email": "divyagarg4922@gmail.com",
+    "github": "https://github.com/divyaaaagarg",
+    "linkedin": "https://www.linkedin.com/in/divya-garg-524bb0383"
+  },
+  "projects": [
+    {
+      "id": "python-programs-collection",
+      "title": "Python Programs Collection",
+      "description": "A beginner-friendly collection of Python programs: factorial (iterative, with input validation), Fibonacci sequence generation, and structure-to-dictionary conversion, plus a small menu in main.py to run them.",
+      "technologies": ["Python"],
+      "repo": "https://github.com/divyaaaagarg/python-programs-collection",
+      "live": ""
+    },
+    {
+      "id": "messy-python-code-improvement",
+      "title": "Messy Python Code Improvement",
+      "description": "A deliberately messy, repetitive Python script refactored with AI assistance into reusable functions with clear names, basic validation, type hints and docstrings, keeping the same output.",
+      "technologies": ["Python", "Refactoring", "AI-assisted coding"],
+      "repo": "https://github.com/divyaaaagarg/messy-python-code-improvement",
+      "live": ""
+    },
+    {
+      "id": "bug-fixing-using-cursor-ai",
+      "title": "Bug Fixing Using Cursor AI",
+      "description": "A buggy Python program identified and corrected using Cursor AI. The original divided by a list length without checking for an empty list and used a wrong loop boundary in a total calculation. The fixed version validates input and uses Python's built-in sum(). A BUG_REPORT.md explains the cause and fix.",
+      "technologies": ["Python", "Cursor AI", "Debugging"],
+      "repo": "https://github.com/divyaaaagarg/-Bug-Fixing-Using-Cursor-AI",
+      "live": ""
+    },
+    {
+      "id": "interactive-quiz-application",
+      "title": "Interactive Quiz Application",
+      "description": "A responsive browser quiz with multiple-choice questions, instant correct/incorrect feedback, a progress indicator, a final score with a performance message, and a restart button.",
+      "technologies": ["HTML5", "CSS3", "JavaScript"],
+      "repo": "https://github.com/divyaaaagarg/Interactive-Quiz-Application",
+      "live": "https://quizz-git-main-divyaaaagarg.vercel.app/"
+    },
+    {
+      "id": "book-reading-list-application",
+      "title": "Book Reading List Application",
+      "description": "A responsive reading tracker where you add books with title and author, mark them read or unread, filter all, unread or completed books, and remove entries. The list is saved in the browser with local storage.",
+      "technologies": ["HTML5", "CSS3", "JavaScript", "Local Storage"],
+      "repo": "https://github.com/divyaaaagarg/Book-Reading-List-Application",
+      "live": "https://portfolio-a21x-nse9i1z0a-divyaaaagarg.vercel.app/"
+    }
+  ]
+}
+
 
